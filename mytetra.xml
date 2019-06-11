@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mytetradoc>
+<root>
+ <format version="1" subversion="2"/>
+ <content>
+  <node crypt="" id="15602260879r1ty3r9g4" name="Бизнес-проект">
+   <recordtable>
+    <record id="1560226158tt2tetglxw" name="Что и зачем" author="" url="" tags="" ctime="20190611070918" dir="1560226158t8iahwdpl9" file="text.html"/>
+   </recordtable>
+   <node crypt="" id="1560226184k86jynfbsh" name="Простой ЯМР-спектрометр">
+    <recordtable>
+     <record id="1560226285e5848j80ae" name="Краткое описание" author="" url="" tags="" ctime="20190611071125" dir="15602262854iza1xexo6" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1560226378z1qi5kj9o5" name="ЯМР-спектрометр со стабилизацией сигнала">
+    <recordtable>
+     <record id="1560226436j7hbhxc54d" name="Краткое описание" author="" url="" tags="" ctime="20190611071356" dir="1560226436bwh2e32dc6" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" icon="/Swift/color_swift_Spaceship.svg" id="1560226471i5xf7rip5a" name="НЧ осциллограф">
+    <recordtable>
+     <record id="1560226669vtltmh8x5p" name="Зачем?" author="" url="" tags="" ctime="20190611071749" dir="15602266698qk5m8w4x1" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15602267516ivsrhpzuu" name="Задачи для программистов">
+    <recordtable>
+     <record id="1560227869lgy1vbhimh" name="Краткое описание" author="" url="" tags="" ctime="20190611073749" dir="1560227869pu4k2v1rbw" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15602281249k1re5bob2" name="Задачи"/>
+  </node>
+ </content>
+</root>
