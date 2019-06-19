@@ -11,11 +11,6 @@
     <recordtable>
      <record id="1560226285e5848j80ae" name="Краткое описание" author="" url="" tags="" ctime="20190611071125" dir="15602262854iza1xexo6" file="text.html" crypt="0"/>
     </recordtable>
-    <node crypt="" id="1560936968px2ks7bgij" name="etwet">
-     <recordtable>
-      <record id="15609369792tviqxbqa9" name="rterte" author="" url="" tags="" ctime="20190619123619" dir="1560936979275krxriup" file="text.html"/>
-     </recordtable>
-    </node>
    </node>
    <node crypt="0" icon="" id="1560226378z1qi5kj9o5" name="ЯМР-спектрометр со стабилизацией сигнала">
     <recordtable>
@@ -30,11 +25,6 @@
    <node crypt="0" icon="" id="15602267516ivsrhpzuu" name="Задачи для программистов">
     <recordtable>
      <record id="1560227869lgy1vbhimh" name="Краткое описание" author="" url="" tags="" ctime="20190611073749" dir="1560227869pu4k2v1rbw" file="text.html" crypt="0"/>
-    </recordtable>
-   </node>
-   <node crypt="0" icon="" id="15602281249k1re5bob2" name="Задачи">
-    <recordtable>
-     <record id="15602840245x9weyzksf" name="setseg" author="" url="" tags="" ctime="20190611231344" dir="1560284024xmb959x7gb" file="text.html" crypt="0"/>
     </recordtable>
    </node>
   </node>
