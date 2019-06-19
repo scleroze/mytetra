@@ -3,39 +3,39 @@
 <root>
  <format version="1" subversion="2"/>
  <content>
-  <node crypt="1" icon="" id="15602260879r1ty3r9g4" name="UkM1U0lNUANVxp9ZxPAgjp8YpoMjjb8Zzxs//uPwAN/Pyi+hvA9G/qTvFIONUzOJruhMgx2w7tdxHqWu9tgOi89S5b76wjDk">
+  <node crypt="0" icon="" id="15602260879r1ty3r9g4" name="Бизнес-проект">
    <recordtable>
-    <record id="1560226158tt2tetglxw" name="UkM1U0lNUAP83piXtJRSGcNut/lwyqgFTk4+KAADHVgfRtAMwJbdTPK+5+qdBE9gLKc0L+3abzrn2tjBv76UtA==" author="" url="" tags="" ctime="20190611070918" dir="1560226158t8iahwdpl9" file="text.html" crypt="1"/>
+    <record id="1560226158tt2tetglxw" name="Что и зачем" author="" url="" tags="" ctime="20190611070918" dir="1560226158t8iahwdpl9" file="text.html" crypt="0"/>
    </recordtable>
-   <node crypt="1" icon="" id="1560226184k86jynfbsh" name="UkM1U0lNUAMkNzghFdC4yjMvwflfNltLAVrD4pjEVdlv1IuILCNzQ8qdE7YXJwcmZoDQKmnvX8QieRHEisiScLVur+Z2aqI28ey6cCkDKoMtD5cq8C9QVg==">
+   <node crypt="0" icon="" id="1560226184k86jynfbsh" name="Простой ЯМР-спектрометр">
     <recordtable>
-     <record id="1560226285e5848j80ae" name="UkM1U0lNUAP52g00W8SP8hSmsm7yuJHsknoOUCInNYe74dq7IL2WPPof4DgWkU4QRVEO6fuk1ZdUF7Q4t3TL6JuXpC9bJIF7" author="" url="" tags="" ctime="20190611071125" dir="15602262854iza1xexo6" file="text.html" crypt="1"/>
+     <record id="1560226285e5848j80ae" name="Краткое описание" author="" url="" tags="" ctime="20190611071125" dir="15602262854iza1xexo6" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="1560226378z1qi5kj9o5" name="UkM1U0lNUAOIZhJr9qBl0Cvsr7wnElD8x2zeslD0Y5N7Tw4rOXp14jwLGDjUw1ZqLNjesz79evKh2xZrVD7QmxkBSDEwNDRyBALqyZCjF17bUMhremjNSBXPCh5pa1dvENakRdgdy0Kn4COo+Lf313+OoUjD/ZaY">
+   <node crypt="0" icon="" id="1560226378z1qi5kj9o5" name="ЯМР-спектрометр со стабилизацией сигнала">
     <recordtable>
-     <record id="1560226436j7hbhxc54d" name="UkM1U0lNUAP34vqlRrUHAxncZomH5FK0C0BB+Uklb6WAIrmT+QzqHB41VDxotw3lfAOPYoeSBP2TOLl4c8bpbit2Pb+/fMMB" author="" url="" tags="" ctime="20190611071356" dir="1560226436bwh2e32dc6" file="text.html" crypt="1"/>
+     <record id="1560226436j7hbhxc54d" name="Краткое описание" author="" url="" tags="" ctime="20190611071356" dir="1560226436bwh2e32dc6" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="UkM1U0lNUANiRa9ujGTeZCeJRTuS0jxBOqyZJ7a0GdDzqN/B3y7jEebZMfAyLEttj+Pk/IIPMOWDubKIzuLL5RDTlI5ACDT2" id="1560226471i5xf7rip5a" name="UkM1U0lNUAN5DEe1b9isUf/CfCCXEXhT3U9OatcqlHXFFzvus7vP4xrSA02GsRTNYqJ3ELObkFEIZIVII9KhGrxGEZgbwdBn">
+   <node crypt="0" icon="/Swift/color_swift_Spaceship.svg" id="1560226471i5xf7rip5a" name="НЧ осциллограф">
     <recordtable>
-     <record id="1560226669vtltmh8x5p" name="UkM1U0lNUAPxLYBzducGCCwUPVe8XiiWh0Ij7LQcTQZ7RwgBApcRW9PFlcbKVbmQ59uEzBUVXQU=" author="" url="" tags="" ctime="20190611071749" dir="15602266698qk5m8w4x1" file="text.html" crypt="1"/>
+     <record id="1560226669vtltmh8x5p" name="Зачем?" author="" url="" tags="" ctime="20190611071749" dir="15602266698qk5m8w4x1" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="15602267516ivsrhpzuu" name="UkM1U0lNUAO8zQfpTXpfNDwrylA6kL4AOMmLlVD9UEttAifYTYmsr5MuFmWYgD1inYf0O0tTvYNnMDFu+XlAz4jrycXtfQwK/6v2b39NinwN4Psp4s3T8g==">
+   <node crypt="0" icon="" id="15602267516ivsrhpzuu" name="Задачи для программистов">
     <recordtable>
-     <record id="1560227869lgy1vbhimh" name="UkM1U0lNUAMumaBBHNZqWr7ArlV8+VgZafEdMvEZvHWuUhq00JvAa2B1xDNK9njtvwngu7VKE/u9oINHVI4GdPg60RcEKKbF" author="" url="" tags="" ctime="20190611073749" dir="1560227869pu4k2v1rbw" file="text.html" crypt="1"/>
+     <record id="1560227869lgy1vbhimh" name="Краткое описание" author="" url="" tags="" ctime="20190611073749" dir="1560227869pu4k2v1rbw" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="15602281249k1re5bob2" name="UkM1U0lNUAMq5Ck78XZpi8hu0bOZMKdIOhdxTD0PUXOO73gRpO/+ydSx1WPTsyeHIzoJeFe76Sk=">
+   <node crypt="0" icon="" id="15602281249k1re5bob2" name="Задачи">
     <recordtable>
-     <record id="15602840245x9weyzksf" name="UkM1U0lNUAMH0YzfxyDDCZCC3NKNsqUkU0Wklh1L4ao6bP4SrzXdl33w4MHMywQH" author="" url="" tags="" ctime="20190611231344" dir="1560284024xmb959x7gb" file="text.html" crypt="1"/>
+     <record id="15602840245x9weyzksf" name="setseg" author="" url="" tags="" ctime="20190611231344" dir="1560284024xmb959x7gb" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="1560668377pwbpbiwl2e" name="UkM1U0lNUAN51ObahqPnFUabVnl2vT7U4rkf1Ftp2Mis1FaVvzU1yW6lfwN47CJm">
+   <node crypt="0" icon="" id="1560668377pwbpbiwl2e" name="222">
     <recordtable>
-     <record id="1560668385bkmla5ae8d" name="UkM1U0lNUAMsIVYM+NymfDQlwd/JWQ2DgU5dV9kRuLVyrzcfK2kPnTCXX9Udgrlk" author="" url="" tags="" ctime="20190616095945" dir="1560668385xpk7eqmuex" file="text.html" crypt="1"/>
-     <record id="15606703971g8j8qauwg" name="UkM1U0lNUAN0cv3TSpm3hMJiXx/z4KB0/1pf7Lblmyr68ks8HqsOA8plVEng38eE" author="" url="" tags="" ctime="20190616103317" dir="1560670397qsg9ahx12q" file="text.html" crypt="1"/>
+     <record id="1560668385bkmla5ae8d" name="srgrdg" author="" url="" tags="" ctime="20190616095945" dir="1560668385xpk7eqmuex" file="text.html" crypt="0"/>
+     <record id="15606703971g8j8qauwg" name="rgxvxcv" author="" url="" tags="" ctime="20190616103317" dir="1560670397qsg9ahx12q" file="text.html" crypt="0"/>
     </recordtable>
    </node>
   </node>
