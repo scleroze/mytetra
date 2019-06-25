@@ -46,7 +46,16 @@
      <record id="1561121005vggyimgpkv" name="Графическая библиотека" author="" url="" tags="" ctime="20190621154406" dir="1561121005j8fbvkpneq" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="1561474328mvyqlk89ev" name="SD-card + STM32"/>
+   <node crypt="" id="1561474328mvyqlk89ev" name="SD-card + STM32">
+    <recordtable>
+     <record id="1561474434fhxw25u179" name="Чужая реализация" author="" url="" tags="" ctime="20190625175354" dir="15614744348oez8b4rwr" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15614745612pv7q2vung" name="Символьный дисплей + STM32">
+    <recordtable>
+     <record id="1561474641xvd1u5j9t9" name="Чужая реализация" author="" url="" tags="" ctime="20190625175721" dir="1561474641u6u8dzwkq0" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
  </content>
 </root>
