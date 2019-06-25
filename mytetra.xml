@@ -29,6 +29,9 @@
    </node>
   </node>
   <node crypt="" id="1560963178e5iey8ocso" name="Прибор Дроздова">
+   <recordtable>
+    <record id="1561478197svlhlqr8e6" name="Шиммирование" author="" url="" tags="" ctime="20190625185637" dir="15614781973z58s12fxt" file="text.html"/>
+   </recordtable>
    <node crypt="" id="1560963190pcs02spx32" name="Датчик">
     <recordtable>
      <record id="1560963230zwmujgujdd" name="Датчик 0" author="" url="" tags="" ctime="20190619195350" dir="1560963230oz7mzj8r30" file="text.html"/>
