@@ -46,6 +46,7 @@
     <recordtable>
      <record id="1561121005vggyimgpkv" name="Графическая библиотека" author="" url="" tags="" ctime="20190621154406" dir="1561121005j8fbvkpneq" file="text.html"/>
      <record id="1561570183f5a4k6m0kq" name="Инсталляция Xlib" author="" url="" tags="" ctime="20190626202943" dir="15615701836bbp0mmi6v" file="text.html"/>
+     <record id="1561628646mdmwueoww3" name="Работающие примеры" author="" url="" tags="" ctime="20190627124406" dir="1561628646kv67eh74tk" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="1561474328mvyqlk89ev" name="SD-card + STM32">
