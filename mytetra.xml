@@ -82,6 +82,10 @@
     <record id="1561624088qtdum550i1" name="Патенты" author="" url="" tags="" ctime="20190627112808" dir="1561624088c7z1bl3ef0" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="1561733248r080gohx9l" name="Fundamental Physics"/>
+  <node crypt="" id="1561733248r080gohx9l" name="Fundamental Physics">
+   <recordtable>
+    <record id="1561733943pmohi8mny8" name="Phosphorum Excitation" author="Kupriyanov Pavel" url="" tags="" ctime="20190628175903" dir="1561733943gog9dd9j7g" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
