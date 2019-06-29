@@ -87,5 +87,10 @@
     <record id="1561733943pmohi8mny8" name="Phosphorum Excitation" author="Kupriyanov Pavel" url="" tags="" ctime="20190628175903" dir="1561733943gog9dd9j7g" file="text.html"/>
    </recordtable>
   </node>
+  <node crypt="" id="1561823383wpkxuob5dh" name="память">
+   <recordtable>
+    <record id="1561823438se3zxt2bhw" name="memory" author="" url="" tags="" ctime="20190629185038" dir="1561823438x6cx3mlv7z" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
