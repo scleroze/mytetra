@@ -99,6 +99,15 @@
     <record id="1561823438se3zxt2bhw" name="memory" author="" url="" tags="" ctime="20190629185038" dir="1561823438x6cx3mlv7z" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="1562227200gdmw81nq3t" name="ГРАНТ 2019 РФФИ"/>
+  <node crypt="" id="1562227200gdmw81nq3t" name="ГРАНТ 2019 РФФИ">
+   <recordtable>
+    <record id="1562227408re4beb6kpc" name="Основные данные" author="" url="" tags="" ctime="20190704110328" dir="1562227408h3v0lvspoy" file="text.html"/>
+   </recordtable>
+   <node crypt="" id="1562227478d0rib5tyqy" name="Содержание проекта">
+    <recordtable>
+     <record id="15622275029yav26m5r6" name="Описание фундаментальной научной задачи в рамках темы, на решение которой направлено исследование&#10;" author="" url="" tags="" ctime="20190704110502" dir="1562227502q4zh2a2bo8" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
  </content>
 </root>
