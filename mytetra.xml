@@ -119,6 +119,10 @@
     </recordtable>
    </node>
   </node>
-  <node crypt="" id="1563294317n9wt3tuv4j" name="Акции. Дневник"/>
+  <node crypt="" id="1563294317n9wt3tuv4j" name="Акции. Дневник">
+   <recordtable>
+    <record id="15632946038224swzbu3" name="наблюдения" author="" url="" tags="" ctime="20190716193003" dir="1563294603sw6rntlhhx" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
