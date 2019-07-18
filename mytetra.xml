@@ -55,7 +55,6 @@
      <record id="1561121005vggyimgpkv" name="Графическая библиотека" author="" url="" tags="" ctime="20190621154406" dir="1561121005j8fbvkpneq" file="text.html"/>
      <record id="1561570183f5a4k6m0kq" name="Инсталяция Xlib" author="" url="" tags="" ctime="20190626202943" dir="15615701836bbp0mmi6v" file="text.html"/>
      <record id="1561628646mdmwueoww3" name="Работающие примеры" author="" url="" tags="" ctime="20190627124406" dir="1561628646kv67eh74tk" file="text.html"/>
-     <record id="156164832209ryjqysx7" name="Инсталяция Qt" author="" url="" tags="" ctime="20190627181202" dir="1561648322p41dbgtuag" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="1561474328mvyqlk89ev" name="SD-card + STM32">
@@ -83,6 +82,8 @@
      <record id="1562660100qumd8y7v9y" name="Работа с текстовыми файлами в Qt" author="" url="" tags="" ctime="20190709111500" dir="1562660100zje41lp7ps" file="text.html"/>
      <record id="1562953222cyjjisb4fh" name="Создание простейшего текстового редактора" author="" url="http://cppstudio.ru/?p=322" tags="" ctime="20190712204022" dir="1562953222wjozj0z1gn" file="text.html"/>
      <record id="1563122734aapyigrnmu" name="передача информации из одной формы в другую" author="" url="" tags="" ctime="20190714194534" dir="1563122734eje904mmrh" file="text.html"/>
+     <record id="156347007304fs8giy3h" name="Диалоговое окно выбора файлов QFileDialog" author="" url="" tags="" ctime="20190718201433" dir="1563470073s78412uf17" file="text.html"/>
+     <record id="156164832209ryjqysx7" name="Инсталяция Qt" author="" url="" tags="" ctime="20190718213706" dir="1561648322p41dbgtuag" file="text.html"/>
     </recordtable>
    </node>
   </node>
