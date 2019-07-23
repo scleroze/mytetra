@@ -49,6 +49,9 @@
     <record id="1562099545q0anfhteba" name="Установка пакетов" author="" url="" tags="" ctime="20190702233225" dir="1562099545f3h0fdhrup" file="text.html"/>
     <record id="1563293047v38ytv204i" name="Справочник по C++" author="" url="" tags="" ctime="20190716190407" dir="1563293047y43gzjt8qq" file="text.html"/>
     <record id="1563450499ttlpdbj913" name="Компиляция нескольких файлов" author="" url="" tags="" ctime="20190718144819" dir="1563450499uprs93rfg2" file="text.html"/>
+    <record id="15637181698w7eu3yzvr" name="install FFTw3" author="" url="" tags="" ctime="20190721170929" dir="15637181690gok8rrkrl" file="text.html"/>
+    <record id="1563719892ll4un77hh4" name="Компилляция с fftw3" author="" url="" tags="" ctime="20190721173812" dir="1563719892pe7dfeic7l" file="text.html"/>
+    <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20190723121224" dir="1563873144sznctqjg7g" file="text.html"/>
    </recordtable>
    <node crypt="" id="1561120078cpn2dqno1n" name="Xlib, X11">
     <recordtable>
