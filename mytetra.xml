@@ -133,5 +133,10 @@
     <record id="15632946038224swzbu3" name="наблюдения" author="" url="" tags="" ctime="20190716193003" dir="1563294603sw6rntlhhx" file="text.html"/>
    </recordtable>
   </node>
+  <node crypt="" id="1564484097wepcpqv7b9" name="Ремонты">
+   <recordtable>
+    <record id="156448416050e9vp39bx" name="Xiaomi Redmi 6" author="" url="" tags="" ctime="20190730135600" dir="15644841604tltlqjgxu" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
