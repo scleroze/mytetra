@@ -140,5 +140,10 @@
     <record id="156448416050e9vp39bx" name="Xiaomi Redmi 6" author="" url="" tags="" ctime="20190730135600" dir="15644841604tltlqjgxu" file="text.html"/>
    </recordtable>
   </node>
+  <node crypt="" id="1566213477stddvn4h23" name="Ремонты, схемы">
+   <recordtable>
+    <record id="1566213564dszfs0iev4" name="Осциллограф с1-94" author="" url="" tags="" ctime="20190819141924" dir="1566213564eki5b6pk94" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
