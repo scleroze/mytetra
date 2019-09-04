@@ -145,5 +145,10 @@
     <record id="1566213564dszfs0iev4" name="Осциллограф с1-94" author="" url="" tags="" ctime="20190819141924" dir="1566213564eki5b6pk94" file="text.html"/>
    </recordtable>
   </node>
+  <node crypt="" id="156757992742wd74yuoa" name="Статьи DZEN">
+   <recordtable>
+    <record id="1567579973qxpnb7ra4l" name="Первое фурье-преобразование было сделано в СССР" author="Куприянов П.А." url="" tags="" ctime="20190904095253" dir="15675799739afz60ywvj" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
