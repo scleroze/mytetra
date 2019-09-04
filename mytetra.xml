@@ -148,6 +148,10 @@
   <node crypt="" id="156757992742wd74yuoa" name="Статьи DZEN">
    <recordtable>
     <record id="1567579973qxpnb7ra4l" name="Первое фурье-преобразование было сделано в СССР" author="Куприянов П.А." url="" tags="" ctime="20190904095253" dir="15675799739afz60ywvj" file="text.html"/>
+    <record id="1567580270g89abtihhk" name="Ядерный не всегда значит радиоактивный" author="" url="" tags="" ctime="20190904095750" dir="1567580270l84zo3awb6" file="text.html"/>
+    <record id="1567580316pg9embqw2f" name="Открытие ЯМР" author="" url="" tags="" ctime="20190904095836" dir="1567580316y8n9xg95er" file="text.html"/>
+    <record id="1567580433kgr07rduhb" name="Ядерный спин. С чем его едят?" author="" url="" tags="" ctime="20190904100033" dir="1567580433nx083ontd0" file="text.html"/>
+    <record id="1567580470ytyr838vmi" name="Самый чувствительный метод измерения магнитного поля" author="" url="" tags="" ctime="20190904100110" dir="1567580470s1fkhzz16o" file="text.html"/>
    </recordtable>
   </node>
  </content>
