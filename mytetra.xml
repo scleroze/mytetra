@@ -100,6 +100,11 @@
      <record id="15646844200w4qccwcug" name="Стеки и Очереди" author="" url="" tags="" ctime="20190801213340" dir="156468442060e10h1oha" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1571000850nup5ouz806" name="Arduino IDE">
+    <recordtable>
+     <record id="1571000917rx2d18xx9c" name="st-link" author="" url="" tags="" ctime="20191014000837" dir="1571000917gk955x04mg" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561476062jilqe8hoq3" name="Авиамоделизм">
    <recordtable>
