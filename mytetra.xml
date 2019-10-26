@@ -38,7 +38,11 @@
      <record id="15614783006lacvn3yb6" name="Шиммирование датчика 0" author="" url="" tags="" ctime="20190625185820" dir="1561478300zbovq25190" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="1572117420w9zvp22wkf" name="Производство"/>
+   <node crypt="" id="1572117420w9zvp22wkf" name="Производство">
+    <recordtable>
+     <record id="15721205708dy0izuu1a" name="комплектующие для закупки" author="" url="" tags="" ctime="20191026230930" dir="1572120570f9jc1wnhu4" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561016490f4s8uofkri" name="Справочная">
    <recordtable>
