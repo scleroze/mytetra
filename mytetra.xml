@@ -38,6 +38,7 @@
      <record id="15614783006lacvn3yb6" name="Шиммирование датчика 0" author="" url="" tags="" ctime="20190625185820" dir="1561478300zbovq25190" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1572117420w9zvp22wkf" name="Производство"/>
   </node>
   <node crypt="" id="1561016490f4s8uofkri" name="Справочная">
    <recordtable>
@@ -103,6 +104,11 @@
    <node crypt="" id="1571000850nup5ouz806" name="Arduino IDE">
     <recordtable>
      <record id="1571000917rx2d18xx9c" name="st-link" author="" url="" tags="" ctime="20191014000837" dir="1571000917gk955x04mg" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15721172104s4pxpfazz" name="Joomla">
+    <recordtable>
+     <record id="1572117272zj8r16nlf8" name="Simple Image Gallery - Плагин фотогалереи для Joomla" author="" url="" tags="" ctime="20191026221432" dir="15721172726az03qr1x8" file="text.html"/>
     </recordtable>
    </node>
   </node>
