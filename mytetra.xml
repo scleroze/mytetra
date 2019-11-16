@@ -188,6 +188,10 @@
     <record id="15696828557xtw2cp8py" name="Робот-3D-принтер магнитными шариками" author="" url="" tags="" ctime="20190928180055" dir="1569682855td7hfy1d1p" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="1573936417l25vh6gh0v" name="Отличные ресурсы по ЯМР"/>
+  <node crypt="" id="1573936417l25vh6gh0v" name="Отличные ресурсы по ЯМР">
+   <recordtable>
+    <record id="1573936778dk5lvsk9qa" name="Интернец-страницы" author="" url="" tags="" ctime="20191116233938" dir="1573936778sr3k6innef" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
