@@ -58,15 +58,7 @@
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
-    <record id="1562099545q0anfhteba" name="Установка пакетов" author="" url="" tags="" ctime="20190702233225" dir="1562099545f3h0fdhrup" file="text.html"/>
-    <record id="1563293047v38ytv204i" name="Справочник по C++" author="" url="" tags="" ctime="20190716190407" dir="1563293047y43gzjt8qq" file="text.html"/>
-    <record id="1563450499ttlpdbj913" name="Компиляция нескольких файлов" author="" url="" tags="" ctime="20190718144819" dir="1563450499uprs93rfg2" file="text.html"/>
-    <record id="15637181698w7eu3yzvr" name="install FFTw3" author="" url="" tags="" ctime="20190721170929" dir="15637181690gok8rrkrl" file="text.html"/>
-    <record id="1563719892ll4un77hh4" name="Компилляция с fftw3" author="" url="" tags="" ctime="20190721173812" dir="1563719892pe7dfeic7l" file="text.html"/>
-    <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20190723121224" dir="1563873144sznctqjg7g" file="text.html"/>
-    <record id="1564375604outq28ysdg" name="BIRTHDAY" author="" url="" tags="" ctime="20190729074644" dir="15643756044u8z4l3kvs" file="text.html"/>
     <record id="1566211213frs952kirb" name="Orange Pi" author="" url="" tags="" ctime="20190819134013" dir="1566211213tffj8p0dta" file="text.html"/>
-    <record id="1574359181m4qfsymrzk" name="Математические константы C++" author="" url="" tags="" ctime="20191121205941" dir="1574359181n3shuvcmcj" file="text.html"/>
    </recordtable>
    <node crypt="" id="1561120078cpn2dqno1n" name="Xlib, X11">
     <recordtable>
@@ -105,6 +97,11 @@
      <record id="15634764607ijohy1vj3" name="getOpenFileName" author="" url="" tags="" ctime="20190718220100" dir="1563476460euijiyta4n" file="text.html"/>
      <record id="15646844200w4qccwcug" name="Стеки и Очереди" author="" url="" tags="" ctime="20190801213340" dir="156468442060e10h1oha" file="text.html"/>
     </recordtable>
+    <node crypt="" id="1574361407ykcewt57wb" name="Projects">
+     <recordtable>
+      <record id="1564375604outq28ysdg" name="BIRTHDAY" author="" url="" tags="" ctime="20191121213703" dir="15643756044u8z4l3kvs" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1571000850nup5ouz806" name="Arduino IDE">
     <recordtable>
@@ -114,6 +111,17 @@
    <node crypt="" id="15721172104s4pxpfazz" name="Joomla">
     <recordtable>
      <record id="1572117272zj8r16nlf8" name="Simple Image Gallery - Плагин фотогалереи для Joomla" author="" url="" tags="" ctime="20191026221432" dir="15721172726az03qr1x8" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1574361283mm4mmg94sf" name="C++">
+    <recordtable>
+     <record id="1563450499ttlpdbj913" name="Компиляция нескольких файлов" author="" url="" tags="" ctime="20191121213506" dir="1563450499uprs93rfg2" file="text.html"/>
+     <record id="1563719892ll4un77hh4" name="Компилляция с fftw3" author="" url="" tags="" ctime="20191121213509" dir="1563719892pe7dfeic7l" file="text.html"/>
+     <record id="1574359181m4qfsymrzk" name="Математические константы C++" author="" url="" tags="" ctime="20191121213513" dir="1574359181n3shuvcmcj" file="text.html"/>
+     <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20191121213517" dir="1563873144sznctqjg7g" file="text.html"/>
+     <record id="15637181698w7eu3yzvr" name="install FFTw3" author="" url="" tags="" ctime="20191121213526" dir="15637181690gok8rrkrl" file="text.html"/>
+     <record id="1563293047v38ytv204i" name="Справочник по C++" author="" url="" tags="" ctime="20191121213530" dir="1563293047y43gzjt8qq" file="text.html"/>
+     <record id="1562099545q0anfhteba" name="Установка пакетов" author="" url="" tags="" ctime="20191121213539" dir="1562099545f3h0fdhrup" file="text.html"/>
     </recordtable>
    </node>
   </node>
