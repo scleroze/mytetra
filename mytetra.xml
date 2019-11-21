@@ -118,11 +118,15 @@
      <record id="1563450499ttlpdbj913" name="Компиляция нескольких файлов" author="" url="" tags="" ctime="20191121213506" dir="1563450499uprs93rfg2" file="text.html"/>
      <record id="1563719892ll4un77hh4" name="Компилляция с fftw3" author="" url="" tags="" ctime="20191121213509" dir="1563719892pe7dfeic7l" file="text.html"/>
      <record id="1574359181m4qfsymrzk" name="Математические константы C++" author="" url="" tags="" ctime="20191121213513" dir="1574359181n3shuvcmcj" file="text.html"/>
-     <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20191121213517" dir="1563873144sznctqjg7g" file="text.html"/>
      <record id="15637181698w7eu3yzvr" name="install FFTw3" author="" url="" tags="" ctime="20191121213526" dir="15637181690gok8rrkrl" file="text.html"/>
      <record id="1563293047v38ytv204i" name="Справочник по C++" author="" url="" tags="" ctime="20191121213530" dir="1563293047y43gzjt8qq" file="text.html"/>
      <record id="1562099545q0anfhteba" name="Установка пакетов" author="" url="" tags="" ctime="20191121213539" dir="1562099545f3h0fdhrup" file="text.html"/>
     </recordtable>
+    <node crypt="" id="15743614912kat7li87x" name="Накопление сигнала по сильной тинии">
+     <recordtable>
+      <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20191121213823" dir="1563873144sznctqjg7g" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
   <node crypt="" id="1561476062jilqe8hoq3" name="Авиамоделизм">
