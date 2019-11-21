@@ -10,5 +10,6 @@ p, li { white-space: pre-wrap; }
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20.11.2019<br />Отдельно создана программа подсчёта частоты <span style=" font-weight:600;">CalcFreq</span></p>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Предполагается её использование с уже отфильтрованным с помощью FFT сигналом</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Порядок использования программ:<br />1. FilterSignal - пе</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">CalcFreq</span></p></body></html>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Порядок использования программ:<br />1. <span style=" font-weight:600;">FilterSignal</span> - делает FFT, вырезает окно с сильной линией, делает обратное FFT, выдает отфильтрованный сигнал</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2.<span style=" font-weight:600;"> CalcFreq</span> - рассчитывает частоту отфильтрованного сигнала</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3. ZeroSpectrum - детектирует исходный сигнал с  опорным сигналом на частоте</p></body></html>
