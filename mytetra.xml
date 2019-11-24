@@ -128,7 +128,11 @@
      </recordtable>
     </node>
    </node>
-   <node crypt="" id="1574575955jmbmnp821k" name="BASH &amp; AWK"/>
+   <node crypt="" id="1574575955jmbmnp821k" name="BASH &amp; AWK">
+    <recordtable>
+     <record id="15745771586vn4r5j9i7" name="запуск С-программ в цикле" author="" url="" tags="" ctime="20191124093238" dir="15745771582kvg9uw1kv" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561476062jilqe8hoq3" name="Авиамоделизм">
    <recordtable>
