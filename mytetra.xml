@@ -43,6 +43,11 @@
      <record id="15721205708dy0izuu1a" name="комплектующие для закупки" author="" url="" tags="" ctime="20191026230930" dir="1572120570f9jc1wnhu4" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1577120343ed0oir9mbb" name="Алгоритмы для кодинга">
+    <recordtable>
+     <record id="1577120373hzhzknshve" name="Расчёт времени релаксации T2* для оценки &#10;однородности локального магнитного поля Земли" author="" url="" tags="" ctime="20191223195933" dir="15771203735ancqf9jvk" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561016490f4s8uofkri" name="Справочная">
    <recordtable>
