@@ -136,6 +136,7 @@
     <node crypt="" id="15743614912kat7li87x" name="Накопление сигнала по сильной тинии">
      <recordtable>
       <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20191121213823" dir="1563873144sznctqjg7g" file="text.html"/>
+      <record id="1579116368s5i3j38hyo" name="Реализация простого LC-фильтра" author="" url="" tags="" ctime="20200115222608" dir="15791163685053yvyyc7" file="text.html"/>
      </recordtable>
     </node>
    </node>
