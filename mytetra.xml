@@ -70,6 +70,11 @@
      <record id="158161872287c6cpqg5t" name="SciDAVis" author="" url="" tags="" ctime="20200213213202" dir="1581618722ixly9muno3" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1586852800shvpuby7of" name="ST-Link">
+    <recordtable>
+     <record id="1586852857jgolxtzy2e" name="Общие сведения" author="" url="" tags="" ctime="20200414112737" dir="1586852857i04dqe4oms" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
