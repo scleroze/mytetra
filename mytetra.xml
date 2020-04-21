@@ -76,7 +76,11 @@
      <record id="1586953062kkr5uwg3pk" name="Установка" author="" url="" tags="" ctime="20200415151742" dir="1586953062m0r7yuj5k2" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="15875055715a3utr0opp" name="Микросхемы"/>
+   <node crypt="" id="15875055715a3utr0opp" name="Микросхемы">
+    <recordtable>
+     <record id="1587505744pnlaq8mhn0" name="AD829" author="" url="" tags="" ctime="20200422004904" dir="15875057447msyn9vkbz" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
