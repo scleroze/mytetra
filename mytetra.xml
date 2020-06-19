@@ -100,7 +100,7 @@
    <node crypt="" id="15893635983rov944nto" name="Часовые модули">
     <recordtable>
      <record id="1589364054rig139ln67" name="DS1307" author="" url="" tags="" ctime="20200513130054" dir="15893640549e7crds3vo" file="text.html"/>
-     <record id="1589364552ou5yniyibn" name=" &#10;DS3231 AT24C32" author="" url="" tags="" ctime="20200513130912" dir="1589364552i7zyps6b40" file="text.html"/>
+     <record id="1589364552ou5yniyibn" name=" DS3231 AT24C32" author="" url="" tags="" ctime="20200513130912" dir="1589364552i7zyps6b40" file="text.html"/>
     </recordtable>
    </node>
   </node>
