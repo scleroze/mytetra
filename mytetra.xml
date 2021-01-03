@@ -31,6 +31,7 @@
   <node crypt="" id="1560963178e5iey8ocso" name="Прибор Дроздова">
    <recordtable>
     <record id="1568265161f6guv8qr1r" name="Заказать комплектуху, когда Нанотех денег даст" author="" url="" tags="" ctime="20190912081241" dir="15682651615ncl0gsqhk" file="text.html"/>
+    <record id="16016437423d3d4vk62q" name="порядок распайки" author="" url="" tags="" ctime="20201002160222" dir="160164374296pe5heviq" file="text.html"/>
    </recordtable>
    <node crypt="" id="1560963190pcs02spx32" name="Датчик">
     <recordtable>
@@ -59,10 +60,50 @@
     <record id="1564398834pkovshi1gv" name="КССВ-спектры" author="" url="" tags="" ctime="20190729141354" dir="1564398834mlnwztsjx2" file="text.html"/>
     <record id="1568104711igpx9bvza4" name="Шаговые двигатели" author="" url="" tags="" ctime="20190910113831" dir="1568104711dehbrqn8et" file="text.html"/>
     <record id="1568647251zhk0abxmv6" name="Советские разъёмы" author="" url="" tags="" ctime="20190916182051" dir="1568647251g9bbbxydxd" file="text.html"/>
+    <record id="15899571899wui78erf8" name="RTCW" author="" url="" tags="" ctime="20200520094629" dir="1589957189y3ddif2jt3" file="text.html"/>
+    <record id="15903183841bzys86nqm" name="Жидкости для ЯМР-спектрометрии" author="" url="" tags="" ctime="20200524140624" dir="1590318384b9jzg1z8y3" file="text.html"/>
+    <record id="1592845770by9oexzgpw" name="ОУ" author="" url="" tags="" ctime="20200622200930" dir="1592845770txrsfrp5ny" file="text.html"/>
+    <record id="1592845823tjfmtwfzw0" name="MOSFET" author="" url="" tags="" ctime="20200622201023" dir="15928458239seih9fgpl" file="text.html"/>
    </recordtable>
    <node crypt="" id="1577280328sj6y8uf2p6" name="Linux">
     <recordtable>
      <record id="15772803574yj3v1dqup" name="Конвертирование pdf в формат jpg в Linux&#10;" author="" url="" tags="" ctime="20191225162557" dir="1577280357mprs3f2ihs" file="text.html"/>
+     <record id="1592032522qzf4rwgh3f" name="Ubuntu проги для установки" author="" url="" tags="" ctime="20200613101522" dir="1592032522ff9gvhrjtj" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1581618688cbgc1fxm95" name="установка sciDAVis">
+    <recordtable>
+     <record id="158161872287c6cpqg5t" name="SciDAVis" author="" url="" tags="" ctime="20200213213202" dir="1581618722ixly9muno3" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1586852800shvpuby7of" name="ST-Link">
+    <recordtable>
+     <record id="1586852857jgolxtzy2e" name="Общие сведения" author="" url="" tags="" ctime="20200414112737" dir="1586852857i04dqe4oms" file="text.html"/>
+     <record id="1586953062kkr5uwg3pk" name="Установка" author="" url="" tags="" ctime="20200415151742" dir="1586953062m0r7yuj5k2" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15875055715a3utr0opp" name="Микросхемы">
+    <recordtable>
+     <record id="1587505744pnlaq8mhn0" name="AD829" author="" url="" tags="" ctime="20200422004904" dir="15875057447msyn9vkbz" file="text.html"/>
+     <record id="1587887150qhxx6rec2g" name="LM386" author="" url="" tags="" ctime="20200426104550" dir="1587887150iq5twgjz9h" file="text.html"/>
+     <record id="1587887238670ywd3ia6" name="AD826" author="" url="" tags="" ctime="20200426104718" dir="1587887238hjub14936v" file="text.html"/>
+     <record id="1592030602oskd80ph55" name="opis" author="" url="" tags="" ctime="20200613094322" dir="1592030602feouxpsuj0" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1587579839anwugr8hko" name="Индикаторы и дисплеи">
+    <recordtable>
+     <record id="1587579910gb0e27q1q0" name="HS420561K-32&#10;&#10;" author="" url="" tags="" ctime="20200422212510" dir="15875799106gu2jgq8uw" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1587909602zz6raet2w6" name="Imax B6">
+    <recordtable>
+     <record id="15879096316040k8csl0" name="COM-port" author="" url="" tags="" ctime="20200426170031" dir="15879096319zkfrbt0d5" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="15893635983rov944nto" name="Часовые модули">
+    <recordtable>
+     <record id="1589364054rig139ln67" name="DS1307" author="" url="" tags="" ctime="20200513130054" dir="15893640549e7crds3vo" file="text.html"/>
+     <record id="1589364552ou5yniyibn" name=" DS3231 AT24C32" author="" url="" tags="" ctime="20200513130912" dir="1589364552i7zyps6b40" file="text.html"/>
     </recordtable>
    </node>
   </node>
@@ -132,16 +173,24 @@
      <record id="1563293047v38ytv204i" name="Справочник по C++" author="" url="" tags="" ctime="20191121213530" dir="1563293047y43gzjt8qq" file="text.html"/>
      <record id="1562099545q0anfhteba" name="Установка пакетов" author="" url="" tags="" ctime="20191121213539" dir="1562099545f3h0fdhrup" file="text.html"/>
      <record id="1575727446b0gkbyki4i" name="Операторы" author="" url="" tags="" ctime="20191207170406" dir="1575727446sansj0ckjc" file="text.html"/>
+     <record id="1582577197fx81u697u9" name="Запись и чтение из файла" author="" url="" tags="" ctime="20200224234637" dir="1582577197a9r32piwmp" file="text.html"/>
+     <record id="160266996326uwb84y4e" name="Компилляция для win" author="" url="" tags="" ctime="20201014130603" dir="1602669963zs7e5lugb2" file="text.html"/>
     </recordtable>
     <node crypt="" id="15743614912kat7li87x" name="Накопление сигнала по сильной тинии">
      <recordtable>
       <record id="1563873144kp8a3zk9v7" name="Алгоритм накопления с компенсаций флуктуации поля" author="" url="" tags="" ctime="20191121213823" dir="1563873144sznctqjg7g" file="text.html"/>
+      <record id="1579116368s5i3j38hyo" name="Реализация простого LC-фильтра" author="" url="" tags="" ctime="20200115222608" dir="15791163685053yvyyc7" file="text.html"/>
      </recordtable>
     </node>
    </node>
    <node crypt="" id="1574575955jmbmnp821k" name="BASH &amp; AWK">
     <recordtable>
      <record id="15745771586vn4r5j9i7" name="запуск С-программ в цикле" author="" url="" tags="" ctime="20191124093238" dir="15745771582kvg9uw1kv" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1587887986ah3ab27sqz" name="STM32">
+    <recordtable>
+     <record id="1587888017ikzs9pccu2" name="Часы на STM32F103C8T6" author="" url="" tags="" ctime="20200426110017" dir="1587888017p6x9wob3h2" file="text.html"/>
     </recordtable>
    </node>
   </node>
@@ -161,11 +210,6 @@
     <record id="1562076566l7ef413o5e" name="2019.07.02" author="" url="" tags="" ctime="20190702170926" dir="1562076566lvm649sn1w" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="1561823383wpkxuob5dh" name="память">
-   <recordtable>
-    <record id="1561823438se3zxt2bhw" name="memory" author="" url="" tags="" ctime="20190629185038" dir="1561823438x6cx3mlv7z" file="text.html"/>
-   </recordtable>
-  </node>
   <node crypt="" id="1562227200gdmw81nq3t" name="ГРАНТ 2019 РФФИ">
    <recordtable>
     <record id="1562227408re4beb6kpc" name="Основные данные" author="" url="" tags="" ctime="20190704110328" dir="1562227408h3v0lvspoy" file="text.html"/>
@@ -179,19 +223,10 @@
     </recordtable>
    </node>
   </node>
-  <node crypt="" id="1563294317n9wt3tuv4j" name="Акции. Дневник">
-   <recordtable>
-    <record id="15632946038224swzbu3" name="наблюдения" author="" url="" tags="" ctime="20190716193003" dir="1563294603sw6rntlhhx" file="text.html"/>
-   </recordtable>
-  </node>
-  <node crypt="" id="1564484097wepcpqv7b9" name="Ремонты">
-   <recordtable>
-    <record id="156448416050e9vp39bx" name="Xiaomi Redmi 6" author="" url="" tags="" ctime="20190730135600" dir="15644841604tltlqjgxu" file="text.html"/>
-   </recordtable>
-  </node>
   <node crypt="" id="1566213477stddvn4h23" name="Ремонты, схемы">
    <recordtable>
     <record id="1566213564dszfs0iev4" name="Осциллограф с1-94" author="" url="" tags="" ctime="20190819141924" dir="1566213564eki5b6pk94" file="text.html"/>
+    <record id="156448416050e9vp39bx" name="Xiaomi Redmi 6" author="" url="" tags="" ctime="20200821130435" dir="15644841604tltlqjgxu" file="text.html"/>
    </recordtable>
   </node>
   <node crypt="" id="156757992742wd74yuoa" name="Статьи DZEN">

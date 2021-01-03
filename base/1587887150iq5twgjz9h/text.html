@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:22px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; font-weight:600; color:#444545;">LM386 — Низковольтный усилитель мощности</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:14px; background-color:#ffffff;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Микросхема LM386, представляет собой усилитель мощности, который можно использовать в устройствах с низким напряжением питания. Например при питании от батареи. По умолчанию её внутренняя схема ограничивает усиление по напряжению в районе 20. Но подключая внешние резистор и конденсатор можно изменять усиление от 20 до 200, а выходное напряжение автоматически устанавливается равным половине напряжения питания. Потребление электроэнергии в холостом режиме составляет  всего 24 милливатта, при питании от 6 В.</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; font-weight:600; color:#444545;">Особенности </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Возможность работы от батарей</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Минимум подключаемых наружных компонентов</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Широкий диапазон питания: от 4 до 12 В или от 5 до 18 В</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Низкий потребляемый ток: 4 мА</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Усиление по напряжению от 20 до 200</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Вход относительно земли</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Самоустанавливающееся выходное напряжение</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:20px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Низкий коэффициент искажений: 0.2% (при AV = 20, VS = 6 В, RL = 8 Ом, PO = 125 мВт, f = 1 кГц)</span></li></ul>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; font-weight:600; color:#444545;">Примениение</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Усилители радиопремников</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Усилители портативных проигрывателей</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Домофоны</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Звуковые системы тв-приемников</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Линейные приводы</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Ультразвуковые приводы</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Небольшие сервоприводы</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:20px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Преобразователи</span></li></ul>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span><img src="image15878871455wlee3evdd.png" /><a name="attachment_1020"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Р</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">ис. 1 Внутренняя принципиальная схема LM386</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">На Рис. 1 показана внутренняя принципиальная схема LM386. Транзисторы Q1 и Q2 образуют дифференциальный усилитель. В нем оба выхода соединены с общим проводом резисторами R1 и R2 номиналом 50 кОм.  Выход дифференциального усилителя<br />(транзистор Q3) подключен к входу усилителя с общим эмиттером(транзистор Q7). Сигнал с коллектора транзистора Q7 напрямую по<br />дается на выход ИС через усилитель мощности класса АБ, имеющий единичное усиление и выполненный на транзисторах Q8-Q9-Q10.<br />которые для минимизации внутреннего падения напряжения и для получения максимальной выходной мощности не снабжены схемой<br />защиты от перегрузки.</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span><img src="image1587887145x594jy4yve.png" /><a name="attachment_1022"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Р</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">ис. 2 Расположение выводов LM386</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; font-weight:600; color:#444545;">Электрические характеристики</span></p>
+<table border="1" style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px;" width="995" cellspacing="1" cellpadding="2">
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Параметр</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Условия</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Мин.</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Тип.</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Макс.</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Ед. изм.</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Рабочее напряжение питания (VS) для LM386N-1, -3, LM386M-1, LM386MM-1</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">4</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">12</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">В</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Рабочее напряжение питания (VS) для LM386N-4</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">5</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">18</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">В</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Потребляемый ток (IQ)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, VIN = 0</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">4</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">8</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">мА</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Выходная мощность (POUT) для LM386N-1, LM386M-1, LM386MM-1</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, RL = 8 Ом, THD = 10%</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">250</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">325</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">мВт</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Выходная мощность (POUT) для LM386N-3</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 9 В, RL = 8 Ом, THD = 10%</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">500</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">700</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">мВт</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Выходная мощность (POUT) для LM386N-4</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 16 В, RL = 32 Ом, THD = 10%</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">700</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">1000</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">мВт</span></p></td></tr>
+<tr>
+<td rowspan="2" style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Усиление по напряжению (AV)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, f = 1 кГц</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">26</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">дБ</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">при 10 мкФ подключенных между выводами 1 и 8</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">46</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">дБ</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Полоса пропускания  (BW)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> VS = 6 В, выводы 1 и 8 отключены</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">300</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">кГц</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> Коэффициент нелинейных искажений  (THD)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, RL = 8 Ом, POUT = 125 мВт  f = 1 кГц, выводы 1 и 8 отключены</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">0.2</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> %</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Ослабление помех по питанию  (PSRR)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, f = 1 кГц, CBYPASS = 10 мкФ</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">50</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">дБ</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Входное сопротивление  (RIN)</span></p></td>
+<td rowspan="2" style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">VS = 6 В, выводы 1 и 8 отключены</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">50</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">кОм</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Входной ток смещения  (IBIAS)</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">250</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;"></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">нА</span></p></td></tr></table>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; font-weight:600; color:#444545;">Схемы включения</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;"> </span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px;" width="1000" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145qhwjd98vhy.png" /><a name="attachment_1024"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">С</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">хема усилителя на LM386 с минимальным количеством, подключаемых элементов и коэффициентом усиления 20</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145qmabgoeu0r.png" /><a name="attachment_1025"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">С</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">хема усилителя на LM386 с коэффициентом усиления 200</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145ndwdhvb2am.png" /><a name="attachment_1027"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">У</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">силитель с коэффициентом усиления 50</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145w0k8zxi88z.png" /><a name="attachment_1028"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">С</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">хема генератора с низким коэффициентом искажений на мосте Вина</span></p></td></tr>
+<tr>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145mz1dqhh5rh.png" /><a name="attachment_1029"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">С</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">хема с дополнительным усилением низких частот</span></p></td>
+<td style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1587887145cfb9s8kjau.png" /><a name="attachment_1030"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">З</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">ависимость коэффициента усиления от частоты для схемы с дополнительным усиление НЧ</span></p></td></tr>
+<tr>
+<td colspan="2" style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image15878871456maqva3tyb.png" /><a name="attachment_1031"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">С</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">хема генератора Меандра</span></p></td></tr>
+<tr>
+<td colspan="2" style=" padding-left:0; padding-right:0; padding-top:5; padding-bottom:5;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image158788714580q9dh6bmx.png" /><a name="attachment_1032"></a><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">У</span><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">силитель мощности для АМ приемника</span></p>
+<p style=" margin-top:0px; margin-bottom:23px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;">Примечание:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Ферритовое кольцо Ferroxcube К5—001—001/3Б с 3 витков провода.</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:0px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">R1C1 должны быть в пределах диапазона входных сигналов.</span></li>
+<li style=" font-family:'Open Sans,sans-serif'; font-size:9pt; color:#444545;" style=" margin-top:0px; margin-bottom:20px; margin-left:20px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14px;">Все компоненты должны быть расположены как можно ближе к ИС.</span></li></ul></td></tr></table>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></body></html>
