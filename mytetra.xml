@@ -251,6 +251,13 @@
    <recordtable>
     <record id="15696828557xtw2cp8py" name="Робот-3D-принтер магнитными шариками" author="" url="" tags="" ctime="20190928180055" dir="1569682855td7hfy1d1p" file="text.html"/>
    </recordtable>
+   <node crypt="" id="1611755198eva9ut4rd9" name="Часы">
+    <node crypt="" id="1611755239h4rvw4oara" name="Индикатор с часовыми и деятичными точками">
+     <recordtable>
+      <record id="1611755276tr8u13pkjb" name="sites" author="" url="" tags="" ctime="20210127164756" dir="16117552764jmbuyvj8n" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
   </node>
   <node crypt="" id="1573936417l25vh6gh0v" name="Отличные ресурсы по ЯМР">
    <recordtable>
