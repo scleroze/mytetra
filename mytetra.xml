@@ -107,7 +107,11 @@
      <record id="1589364552ou5yniyibn" name=" DS3231 AT24C32" author="" url="" tags="" ctime="20200513130912" dir="1589364552i7zyps6b40" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="1613066872r5ielxtp2r" name="Транзисторы"/>
+   <node crypt="" id="1613066872r5ielxtp2r" name="Транзисторы">
+    <recordtable>
+     <record id="16130674496apistl1vj" name="opis" author="" url="" tags="" ctime="20210211211729" dir="1613067449le6c2georz" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
