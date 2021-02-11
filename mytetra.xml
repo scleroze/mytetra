@@ -192,6 +192,7 @@
    <node crypt="" id="1587887986ah3ab27sqz" name="STM32">
     <recordtable>
      <record id="1587888017ikzs9pccu2" name="Часы на STM32F103C8T6" author="" url="" tags="" ctime="20200426110017" dir="1587888017p6x9wob3h2" file="text.html"/>
+     <record id="1613063079d7hlg0342x" name="Отладочная плата STM32F103C8T6" author="" url="" tags="" ctime="20210211200439" dir="1613063079xrhuyqbahe" file="text.html"/>
     </recordtable>
    </node>
   </node>
