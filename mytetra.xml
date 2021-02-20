@@ -95,6 +95,11 @@
      <record id="1587887238670ywd3ia6" name="AD826" author="" url="" tags="" ctime="20200426104718" dir="1587887238hjub14936v" file="text.html"/>
      <record id="1592030602oskd80ph55" name="opis" author="" url="" tags="" ctime="20200613094322" dir="1592030602feouxpsuj0" file="text.html"/>
     </recordtable>
+    <node crypt="" id="161385004271za08zhs7" name="Драйверы 7-сегментных индикаторов">
+     <recordtable>
+      <record id="1613850074lf2vtelba8" name="CD4026 общ. катод" author="" url="" tags="" ctime="20210220224114" dir="16138500746h3yjx3w1h" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1587579839anwugr8hko" name="Индикаторы и дисплеи">
     <recordtable>
