@@ -125,6 +125,12 @@
      <record id="16130674496apistl1vj" name="opis" author="" url="" tags="" ctime="20210211211729" dir="1613067449le6c2georz" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="16141801278kli7jmlfv" name="VLC">
+    <recordtable>
+     <record id="1614180226j7ntu9z42b" name="Замена звуковой дорожки в файле" author="" url="" tags="" ctime="20210224182346" dir="1614180226xslun1lp79" file="text.html"/>
+     <record id="1614180287wd2azp3c4i" name="Удаление звуковой дорожки" author="" url="" tags="" ctime="20210224182447" dir="16141802879rycqkuach" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
