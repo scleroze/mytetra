@@ -142,6 +142,11 @@
      <record id="1615138255a82q85z1sb" name="HD Audio распиновка" author="" url="" tags="" ctime="20210307203055" dir="1615138255il31wkcyz2" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1617562238h2wb0mxuwr" name="Автодин">
+    <recordtable>
+     <record id="1617562304lrcd5m50sr" name="Генератор слабых колебаний (автодинный спиновый детектор)" author="" url="" tags="" ctime="20210404215144" dir="1617562304hh2qoyt7rv" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
