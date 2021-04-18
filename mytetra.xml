@@ -103,6 +103,16 @@
       <record id="1613856922r6vxujke81" name="MAX7219/MAX7222" author="" url="" tags="" ctime="20210221003522" dir="1613856922x3cs2tymbx" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1618774689cedv4dv1zc" name="Микроконтроллеры">
+     <recordtable>
+      <record id="1618774767u32unndu4u" name="M25P05-AVMN6P" author="" url="" tags="" ctime="20210418223927" dir="1618774767sf2k4532ek" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1618774812z3zh3kn6m1" name="Драйверы двигателей">
+     <recordtable>
+      <record id="16187748805t4k9n2hc0" name="Для трехфазных от HDD" author="" url="" tags="" ctime="20210418224120" dir="1618774880z3q4cwrpft" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1587579839anwugr8hko" name="Индикаторы и дисплеи">
     <recordtable>
