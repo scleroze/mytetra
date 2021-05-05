@@ -101,6 +101,7 @@
      <recordtable>
       <record id="1613850074lf2vtelba8" name="CD4026 общ. катод (счётчик)" author="" url="" tags="" ctime="20210220224114" dir="16138500746h3yjx3w1h" file="text.html"/>
       <record id="1613856922r6vxujke81" name="MAX7219/MAX7221" author="" url="" tags="" ctime="20210221003522" dir="1613856922x3cs2tymbx" file="text.html"/>
+      <record id="1620235272xp8gqx7xuw" name="TM1637" author="" url="" tags="" ctime="20210505202112" dir="16202352722emgkixpkx" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1618774689cedv4dv1zc" name="Микроконтроллеры">
