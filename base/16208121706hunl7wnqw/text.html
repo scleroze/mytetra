@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cp file1 file2</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">сопировать файл file1 в файл file2</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">сопировать файл 'file1' в файл 'file2'</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cp dir/*</p></td>
@@ -273,7 +273,7 @@ p, li { white-space: pre-wrap; }
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cp -a dir1 dir2</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">копировать директорию dir1 в директорию dir2</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">копировать директорию 'dir1' в директорию 'dir2'</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">In -s filel Ink1</p></td>
@@ -296,22 +296,22 @@ p, li { white-space: pre-wrap; }
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">find / -name file1</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">наити файлы и директории с именем file1. Поиск начать с корня (/)</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">наити файлы и директории с именем 'file1'. Поиск начать с корня (/)</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">find / -user user1</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">наити фаил и директорию принадлежащие пользователю user1. Поиск начать с корня (/)</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">наити фаил и директорию принадлежащие пользователю 'user1'. Поиск начать с корня (/)</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">find /home/user1 -name &quot;*.bin&quot;</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Найти все файлы и директории, имена которых оканчиваются на '.bin'. Поиск начать с ' /home/user1&quot;</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Найти все файлы и директории, имена которых оканчиваются на '.bin'. Поиск начать с '/home/user1'</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">find /usr/bin -type f -atime +100</p></td>
 <td>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">найти все файлы в '/изг/ш', время последнего обращения к которым более 100 дней</p></td></tr>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">найти все файлы в '/usr/bin', время последнего обращения к которым более 100 дней</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">find /usr/bin -type f -mtime -10</p></td>
@@ -335,18 +335,21 @@ p, li { white-space: pre-wrap; }
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">whereis halt</p></td>
-<td></td></tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">показывает размещение бинарных файлов, исходных кодов и руководств. относящихся к файлу 'halt'.</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">which halt</p></td>
-<td></td></tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">отображает полный путь к файлу 'halt'</p></td></tr>
 <tr>
 <td colspan="2">
 <p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">монтирование файловых систем</span></p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">mount /dev/hda2 /mnt/hda2</p></td>
-<td></td></tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">монтирует раздел 'ВЧа2' в точку монтирования '/mnt/hda2'. Убедитесь в наличии директории-точки монтирования '/mnt/hda2'</p></td></tr>
 <tr>
 <td>
 <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">umount /dev/hda2</p></td>
