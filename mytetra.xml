@@ -121,6 +121,7 @@
     <recordtable>
      <record id="1587579910gb0e27q1q0" name="HS420561K-32&#10;&#10;" author="" url="" tags="" ctime="20200422212510" dir="15875799106gu2jgq8uw" file="text.html"/>
      <record id="16138354011g5myroo07" name="4041bh-33" author="" url="" tags="" ctime="20210220183641" dir="1613835401ubox1vzsgs" file="text.html"/>
+     <record id="16243443688qmuj790im" name="ILI9341 + teensy" author="" url="" tags="" ctime="20210622094608" dir="1624344368to5zgdxttv" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="1587909602zz6raet2w6" name="Imax B6">
@@ -247,6 +248,11 @@
     <recordtable>
      <record id="1613063079d7hlg0342x" name="Отладочная плата STM32F103C8T6" author="" url="" tags="" ctime="20210211200439" dir="1613063079xrhuyqbahe" file="text.html"/>
      <record id="1587888017ikzs9pccu2" name="Часы на STM32F103C8T6" author="" url="" tags="" ctime="20200426110017" dir="1587888017p6x9wob3h2" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1624344442qp4wok9mt2" name="фильтры">
+    <recordtable>
+     <record id="16243445066tex32amw5" name="Построение цифрового фильтра с конечной импульсной характеристикой" author="" url="" tags="" ctime="20210622094826" dir="1624344506crqzhybmym" file="text.html"/>
     </recordtable>
    </node>
   </node>
