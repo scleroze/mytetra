@@ -162,6 +162,11 @@
      <record id="1617562304lrcd5m50sr" name="Генератор слабых колебаний (автодинный спиновый детектор)" author="" url="" tags="" ctime="20210404215144" dir="1617562304hh2qoyt7rv" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1627333472a9p3znqb6y" name="Arduino модули">
+    <recordtable>
+     <record id="1627333533ihhm789gtm" name="rc522" author="" url="" tags="" ctime="20210727000533" dir="16273335335az8m4tnne" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="15611200584ritp1qbt9" name="Программирование">
    <recordtable>
