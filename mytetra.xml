@@ -72,6 +72,7 @@
     <record id="1592845823tjfmtwfzw0" name="MOSFET" author="" url="" tags="" ctime="20200622201023" dir="15928458239seih9fgpl" file="text.html"/>
     <record id="1621421867ms1eg5669q" name="Транзисторы" author="" url="" tags="" ctime="20210519135747" dir="1621421867iqhkjah0hv" file="text.html"/>
     <record id="1626872451028ntj9ki7" name="WINE" author="" url="" tags="" ctime="20210721160051" dir="1626872451hued05tvl7" file="text.html"/>
+    <record id="16286658401y98dwkll0" name="преобразователи DC-DC" author="" url="" tags="" ctime="20210811101040" dir="16286658404hon3kwdj0" file="text.html"/>
    </recordtable>
    <node crypt="" id="1577280328sj6y8uf2p6" name="Linux">
     <recordtable>
@@ -165,6 +166,11 @@
    <node crypt="" id="1627333472a9p3znqb6y" name="Arduino модули">
     <recordtable>
      <record id="1627333533ihhm789gtm" name="rc522" author="" url="" tags="" ctime="20210727000533" dir="16273335335az8m4tnne" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="16286658688slwf4xsig" name="DC-DC преобразователи">
+    <recordtable>
+     <record id="1628665934r1dc1mh0ky" name="XL4015" author="" url="" tags="" ctime="20210811101214" dir="1628665934fz6ahi2qwo" file="text.html"/>
     </recordtable>
    </node>
   </node>
