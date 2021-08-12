@@ -72,7 +72,6 @@
     <record id="1592845823tjfmtwfzw0" name="MOSFET" author="" url="" tags="" ctime="20200622201023" dir="15928458239seih9fgpl" file="text.html"/>
     <record id="1621421867ms1eg5669q" name="Транзисторы" author="" url="" tags="" ctime="20210519135747" dir="1621421867iqhkjah0hv" file="text.html"/>
     <record id="1626872451028ntj9ki7" name="WINE" author="" url="" tags="" ctime="20210721160051" dir="1626872451hued05tvl7" file="text.html"/>
-    <record id="16286658401y98dwkll0" name="преобразователи DC-DC" author="" url="" tags="" ctime="20210811101040" dir="16286658404hon3kwdj0" file="text.html"/>
    </recordtable>
    <node crypt="" id="1577280328sj6y8uf2p6" name="Linux">
     <recordtable>
@@ -325,13 +324,6 @@
    <recordtable>
     <record id="15696828557xtw2cp8py" name="Робот-3D-принтер магнитными шариками" author="" url="" tags="" ctime="20190928180055" dir="1569682855td7hfy1d1p" file="text.html"/>
    </recordtable>
-   <node crypt="" id="1611755198eva9ut4rd9" name="Часы">
-    <node crypt="" id="1611755239h4rvw4oara" name="Индикатор с часовыми и деятичными точками">
-     <recordtable>
-      <record id="1611755276tr8u13pkjb" name="sites" author="" url="" tags="" ctime="20210127164756" dir="16117552764jmbuyvj8n" file="text.html"/>
-     </recordtable>
-    </node>
-   </node>
   </node>
   <node crypt="" id="1573936417l25vh6gh0v" name="Отличные ресурсы по ЯМР">
    <recordtable>
