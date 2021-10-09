@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:24px; margin-bottom:24px; margin-left:0px; margin-right:10px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;"><span style=" font-family:'Verdana,Geneva,Arial,sans-serif'; font-size:12px; color:#555555; background-color:#ffffff;">Когда Вам для реализации Ваших хотелок при наличии приёмника FS-IA6B потребуется более чем 6 каналов PWM</span><span style=" font-family:'Verdana,Geneva,Arial,sans-serif'; font-size:12px; color:#555555;"><br />можно воспользовать недорогой ARDUINO NANO или её клоном и ниже приведённым скетчем.<br />Код на реальном изделии не проверялся, но должен работать, ошибки, если таковые найдутся, поправлю.</span></p>
+<p style=" margin-top:24px; margin-bottom:24px; margin-left:0px; margin-right:10px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;"><span style=" font-family:'Verdana,Geneva,Arial,sans-serif'; font-size:12px; color:#555555; background-color:#ffffff;">Режим PS должен отрабатывать правильно, если он должным образом выставлен на аппаратуре управления.</span><span style=" font-family:'Verdana,Geneva,Arial,sans-serif'; font-size:12px; color:#555555;"><br />С первого канала приёмника сигнал подаётся на пин 3 ардуины, съём PWM сигнала с цифровых выводов с 5 по 12...</span></p>
+<p style=" margin-top:15px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f8f8f8;"><a name="highlighter_529610"></a><a href="http://arduino.ru/forum/proekty/dekoder-ppm-priemnika-fs-ia6b-na-vosem-kanalov#viewSource"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:1px; color:#a0a0a0;">к</span></a><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:1px; color:#a0a0a0;">од</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:8px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:1px; color:#555555;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:-5000px;"><a href="http://arduino.ru/forum/proekty/dekoder-ppm-priemnika-fs-ia6b-na-vosem-kanalov#printSource"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:1px; color:#a0a0a0;">расечатать</span></a><a href="http://arduino.ru/forum/proekty/dekoder-ppm-priemnika-fs-ia6b-na-vosem-kanalov#about"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:1px; color:#a0a0a0;">?</span></a></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">01</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#include &lt;PPMReader.h&gt;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">02</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#include &lt;InterruptHandler.h&gt;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">03</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#include &lt;Servo.h&gt;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">04</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">interruptPin = 3;                                                  </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#008200;">//  пин приемника</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">05</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">channelAmount = 8;                                                 </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#008200;">//  число каналов (max 8 для PPM)</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">06</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">PPMReader ppm(interruptPin, channelAmount);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">07</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">08</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr1 5</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">09</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr2 6</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">10</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr3 7</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">11</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr4 8</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">12</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr5 9</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">13</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr6 10</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">14</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr7 11</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">15</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define svr8 12</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">16</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">17</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_1;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">18</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_2;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">19</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_3;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">20</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_4;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">21</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_5;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">22</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_6;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">23</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_7;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">24</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">Servo Srv_8;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">25</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">26</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch1   value[1]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">27</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch2   value[2]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">28</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch3   value[3]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">29</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch4   value[4]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">30</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch5   value[5]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">31</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch6   value[6]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">32</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch7   value[7]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">33</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#808080;">#define ch8   value[8]</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">34</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">unsigned </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">value[9];</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">35</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">36</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">void</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">setup</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">(){</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#008200;">//Serial.begin(115200);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">37</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">  Srv_1.attach(svr1);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">38</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">   Srv_2.attach(svr2);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">39</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    Srv_3.attach(svr3);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">40</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">     Srv_4.attach(svr4);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">41</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">      Srv_5.attach(svr5);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">42</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">       Srv_6.attach(svr6);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">43</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">        Srv_7.attach(svr7);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">44</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">         Srv_8.attach(svr8);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">45</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">  }</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">46</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">47</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">void</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">read_ppm(){</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">48</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">   unsigned </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">long</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">temp;</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">49</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">   </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">for</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">(</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">channel = 1; channel &lt;= channelAmount; ++channel)                     </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#008200;">//  ВЫВОД ВСЕХ КАНАЛОВ В SERIAL</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">50</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    {</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">51</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">     </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">if</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">(channel==3) {value[channel] = (unsigned </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">)ppm.rawChannelValue(channel); </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#008200;">//  FS настроен на стик газа CH3</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">52</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">     }</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">else</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">{                                                            </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">53</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">     value[channel] = (unsigned </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">int</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">)ppm.latestValidChannelValue(channel, 0);}</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">54</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">  </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">55</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    }</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">56</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">   }</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">57</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">58</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">void</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">run_ppm(){</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">59</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">     Srv_1.write(ch1);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">60</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">      Srv_2.write(ch2);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">61</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">       Srv_3.write(ch3);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">62</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">        Srv_4.write(ch4);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">63</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">         Srv_5.write(ch5); </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">64</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">          Srv_6.write(ch6);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">65</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">           Srv_7.write(ch7); </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">66</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">            Srv_8.write(ch8);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">67</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">}</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">68</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">69</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">void</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;"> </span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; font-weight:600; color:#006699;">loop</span><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">()</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">70</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">{</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">71</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    read_ppm();</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">72</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    run_ppm();</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#ffffff;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">73</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">    delay(15);</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#555555; background-color:#f8f8f8;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td style=" vertical-align:top; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#afafaf;">74</span></p></td>
+<td style=" vertical-align:top; padding-left:8; padding-right:0; padding-top:2; padding-bottom:0;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Consolas,Bitstream Vera Sans Mono,Courier New,Courier,monospace'; font-size:12px; color:#000000;">}</span></p></td></tr></table>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>
