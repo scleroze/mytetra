@@ -27,13 +27,6 @@
      <record id="1560227869lgy1vbhimh" name="Краткое описание" author="" url="" tags="" ctime="20190611073749" dir="1560227869pu4k2v1rbw" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="" id="16337765793a7l6k0nbb" name="Радиомодели">
-    <recordtable>
-     <record id="1633776637aoiqn65dzk" name="PPM-декодер на Ардуино" author="" url="" tags="" ctime="20211009135037" dir="1633776637wccwcdyeua" file="text.html"/>
-     <record id="1633778177t4vu9so7ko" name="Еще PPM-декодер на Ардуино" author="" url="" tags="" ctime="20211009141617" dir="1633778177lknph05szh" file="text.html"/>
-     <record id="1633859574s3ome701dy" name="Miniquadrocopter из готовой платы" author="" url="" tags="" ctime="20211010125254" dir="1633859574loc1y3bhme" file="text.html"/>
-    </recordtable>
-   </node>
   </node>
   <node crypt="" id="1560963178e5iey8ocso" name="Прибор Дроздова">
    <recordtable>
@@ -372,6 +365,13 @@
      <record id="1627540275bvuutp2h9u" name="Предлоги" author="" url="" tags="" ctime="20210729093115" dir="1627540275wjafcc6yq4" file="text.html"/>
     </recordtable>
    </node>
+  </node>
+  <node crypt="" id="1644766118qeisvxyirr" name="Радиомодели">
+   <recordtable>
+    <record id="1633776637aoiqn65dzk" name="PPM-декодер на Ардуино" author="" url="" tags="" ctime="20220213182838" dir="1633776637wccwcdyeua" file="text.html"/>
+    <record id="1633778177t4vu9so7ko" name="Еще PPM-декодер на Ардуино" author="" url="" tags="" ctime="20220213182838" dir="1633778177lknph05szh" file="text.html"/>
+    <record id="1633859574s3ome701dy" name="Miniquadrocopter из готовой платы" author="" url="" tags="" ctime="20220213182838" dir="1633859574loc1y3bhme" file="text.html"/>
+   </recordtable>
   </node>
  </content>
 </root>
