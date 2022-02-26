@@ -81,6 +81,11 @@
      <record id="1637299826pgrcbcokmu" name="Welcome window UBUNTU" author="" url="" tags="" ctime="20211119083026" dir="1637299826if95zhm7s4" file="text.html"/>
      <record id="16440914353hmd5zjusy" name="Driver видеокарты" author="" url="" tags="" ctime="20220205230355" dir="1644091435rbz31s2jkm" file="text.html"/>
     </recordtable>
+    <node crypt="" id="16458659379ojujo9ggm" name="Bash">
+     <recordtable>
+      <record id="1645866005fxkzd83dm5" name="Замена символа в текстовом файле" author="" url="" tags="" ctime="20220226120005" dir="1645866005aaat4uydqe" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1581618688cbgc1fxm95" name="установка sciDAVis">
     <recordtable>
