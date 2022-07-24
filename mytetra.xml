@@ -55,7 +55,11 @@
      <record id="1613640514rymiducqu4" name="Тест подключение SD-модуля" author="" url="" tags="" ctime="20210218122834" dir="1613640514o4ahw882a6" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="16586697153tico6c90p" name="Особенности готовых приборов"/>
+   <node crypt="" id="16586697153tico6c90p" name="Особенности готовых приборов">
+    <recordtable>
+     <record id="1658669807r3uqait03m" name="Прошивка" author="" url="" tags="" ctime="20220724163647" dir="16586698077ftp4nxsk0" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561016490f4s8uofkri" name="Справочная">
    <recordtable>
