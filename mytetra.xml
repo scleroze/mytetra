@@ -164,11 +164,6 @@
      <record id="1614180287wd2azp3c4i" name="Удаление звуковой дорожки" author="" url="" tags="" ctime="20210224182447" dir="16141802879rycqkuach" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="1614181363yd5m6evfvk" name="Сайт ГЗЖ">
-    <recordtable>
-     <record id="16141815684vj1y5x5ou" name="Дата в новостях" author="" url="" tags="" ctime="20210224184608" dir="1614181568xnai9xw4s7" file="text.html"/>
-    </recordtable>
-   </node>
    <node crypt="" id="161513820694cjdcom3s" name="Модернизация компа">
     <recordtable>
      <record id="1615138255a82q85z1sb" name="HD Audio распиновка" author="" url="" tags="" ctime="20210307203055" dir="1615138255il31wkcyz2" file="text.html"/>
@@ -388,9 +383,10 @@
     <record id="1633859574s3ome701dy" name="Miniquadrocopter из готовой платы" author="" url="" tags="" ctime="20220213182838" dir="1633859574loc1y3bhme" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="1657602020mv8yprooxk" name="Голоса">
+  <node crypt="" id="1726736289rqd4b3illi" name="Voices For Animals">
    <recordtable>
-    <record id="1657602092xoj7p75pot" name="Значки соцсетей" author="" url="" tags="" ctime="20220712080132" dir="1657602092haz584wwsa" file="text.html"/>
+    <record id="1657602092xoj7p75pot" name="Значки соцсетей" author="" url="" tags="" ctime="20240919115918" dir="1657602092haz584wwsa" file="text.html"/>
+    <record id="16141815684vj1y5x5ou" name="Дата в новостях" author="" url="" tags="" ctime="20240919120004" dir="1614181568xnai9xw4s7" file="text.html"/>
    </recordtable>
   </node>
  </content>
