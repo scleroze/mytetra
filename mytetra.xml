@@ -276,7 +276,11 @@
       <record id="1579116368s5i3j38hyo" name="Реализация простого LC-фильтра" author="" url="" tags="" ctime="20200115222608" dir="15791163685053yvyyc7" file="text.html"/>
      </recordtable>
     </node>
-    <node crypt="" id="1726737368hm08h61aul" name="Программа моделирования ЯМР-спектров"/>
+    <node crypt="" id="1726737368hm08h61aul" name="Программа моделирования ЯМР-спектров">
+     <recordtable>
+      <record id="17267375647qlfb4ky2g" name="Архитектура программы" author="" url="" tags="" ctime="20240919121924" dir="1726737564n8aduyravb" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1574575955jmbmnp821k" name="BASH &amp; AWK">
     <recordtable>
