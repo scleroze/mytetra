@@ -405,6 +405,10 @@
     <record id="1726736860q66j0kpqhe" name="Кнопка призыва к действию в основном &quot;main&quot; меню." author="" url="" tags="" ctime="20240919120740" dir="1726736860cir1f1lztv" file="text.html"/>
    </recordtable>
   </node>
-  <node crypt="" id="17283263143w8mdte231" name="EVE online"/>
+  <node crypt="" id="17283263143w8mdte231" name="EVE online">
+   <recordtable>
+    <record id="1728326664c2gretko7w" name="Не запускается после обновления XUBUNTU" author="" url="" tags="" ctime="20241007214424" dir="172832666451sbvd3lx8" file="text.html"/>
+   </recordtable>
+  </node>
  </content>
 </root>
