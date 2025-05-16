@@ -80,6 +80,7 @@
     <record id="1626872451028ntj9ki7" name="WINE" author="" url="" tags="" ctime="20210721160051" dir="1626872451hued05tvl7" file="text.html"/>
     <record id="1652868079ysuefmr2ex" name="Google Chrome " author="" url="" tags="" ctime="20220518130119" dir="16528680790n8bfws6xg" file="text.html"/>
     <record id="174054332644vmjsiyg0" name="Вод символа по коду в UBUNTU" author="" url="" tags="" ctime="20250226071526" dir="1740543326a83z49i2xo" file="text.html"/>
+    <record id="1747390441cikpk9fe8x" name="Passwords" author="" url="" tags="" ctime="20250516131401" dir="17473904417tyy3xdbfo" file="text.html"/>
    </recordtable>
    <node crypt="" id="1577280328sj6y8uf2p6" name="Linux">
     <recordtable>
@@ -416,6 +417,7 @@
   <node crypt="" id="1744447751g3l2g9zxyp" name="Turkey">
    <recordtable>
     <record id="17444480347uvgfnip16" name="mytetra to new system" author="" url="" tags="" ctime="20250412115354" dir="1744448034fki0a0id2c" file="text.html"/>
+    <record id="17444634093zvyxd01xd" name="синхронизация часов" author="" url="" tags="" ctime="20250412161009" dir="174446340998y24t6yoo" file="text.html"/>
    </recordtable>
    <node crypt="" id="1744447812jjyjps33r8" name="Quantum calculation"/>
   </node>
