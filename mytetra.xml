@@ -324,6 +324,16 @@
      <record id="1745665642agcrhyeoh5" name="запуск оболочки" author="" url="" tags="" ctime="20250426140722" dir="1745665642lebar5cn8k" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1748330348h9m7ziz0po" name="engine_matrix">
+    <recordtable>
+     <record id="1748330462syxr0zuvl1" name="Установка необходимых пакетов и модулей" author="" url="" tags="" ctime="20250527102102" dir="1748330462g16iolgol5" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1748330576irqm27vj4s" name="Spintrum">
+    <recordtable>
+     <record id="1748330659h73vpq6j73" name="Установка" author="" url="" tags="" ctime="20250527102419" dir="1748330659zbpqx7d9qh" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="1561476062jilqe8hoq3" name="Авиамоделизм">
    <recordtable>
